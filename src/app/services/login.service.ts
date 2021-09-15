@@ -5,8 +5,8 @@ import { Injectable } from '@angular/core';
 })
 export class LoginService {
   getUserData(){
-    let uname = 'user';
-    let pwd = 'password';
+    let uname = 'User';
+    let pwd = 'Password';
     uname += '@root.app';
     return [uname, pwd];
   }
