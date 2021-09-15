@@ -1,3 +1,4 @@
+import { LoginService } from './../services/login.service';
 import { Component, OnInit } from '@angular/core';
 
 @Component({
@@ -7,11 +8,14 @@ import { Component, OnInit } from '@angular/core';
 })
 export class LoginComponent implements OnInit {
   title = 'Login';
+  private uname: any;
+  private pwd: any;
 
-  constructor() {
+  constructor(login: LoginService) {
+    [this.uname, this.pwd] = login.getUserData();
   }
 
-  ngOnInit(): void {    
+  ngOnInit(): void {
   }
 
 }

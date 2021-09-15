@@ -1,3 +1,4 @@
+import { LoginService } from './services/login.service';
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 
@@ -16,11 +17,9 @@ import { WelcomeComponent } from './welcome/welcome.component';
   imports: [
     BrowserModule,
     AppRoutingModule,
-    //FormsModule
   ],
   providers: [
-    LoginComponent, 
-    WelcomeComponent
+    LoginService
   ],
   bootstrap: [AppComponent]
 })
