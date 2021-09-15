@@ -8,8 +8,8 @@ import { Component, OnInit } from '@angular/core';
 })
 export class LoginComponent implements OnInit {
   title = 'Login';
-  private uname: any;
-  private pwd: any;
+  uname: any;
+  pwd: any;
   private loginStatus: any;
   private loginAuth: any;
 
@@ -17,10 +17,7 @@ export class LoginComponent implements OnInit {
     this.loginAuth = loginAuth;
   }
 
-  loginClick(unameVal:string,pwdValue:string){
-    this.uname = unameVal;
-    this.pwd = pwdValue;
-
+  loginClick(){
     console.log(this.uname, this.pwd);
     this.loginStatus = this.loginAuth.auth(this.uname,this.pwd);
     console.log(this.loginStatus);

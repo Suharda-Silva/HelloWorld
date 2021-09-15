@@ -4,14 +4,14 @@
         <div class="form">
             <form name="login" onsubmit="reset(); return false">
                 <label for="uname">User Name:</label>
-                <input required type="text" id="uname" #unameVal><br><br>
+                <input required type="text" id="uname" [(ngModel)]="uname" name="uname"><br><br>
                 <label for="pwd">Password:</label>
-                <input required type="password" id="pwd" #pwdVal><br><br>
+                <input required type="password" id="pwd" [(ngModel)]="pwd" name="pwd"><br><br>
                 <input type="submit" 
                     class="submit" 
                     id="submit"
                     value="Login" 
-                    (click)="loginClick(unameVal.value,pwdVal.value)"
+                    (click)="loginClick()"
                 />
             </form>
         </div>
