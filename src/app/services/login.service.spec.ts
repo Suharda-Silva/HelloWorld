@@ -4,6 +4,7 @@ import { LoginService } from './login.service';
 
 describe('LoginService', () => {
   let service: LoginService;
+  // Login services handle the login data services and databases
 
   beforeEach(() => {
     TestBed.configureTestingModule({});

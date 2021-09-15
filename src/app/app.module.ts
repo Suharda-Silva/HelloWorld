@@ -1,3 +1,4 @@
+import { AuthService } from './services/auth.service';
 import { LoginService } from './services/login.service';
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
@@ -19,7 +20,8 @@ import { WelcomeComponent } from './welcome/welcome.component';
     AppRoutingModule,
   ],
   providers: [
-    LoginService
+    LoginService,
+    AuthService
   ],
   bootstrap: [AppComponent]
 })

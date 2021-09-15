@@ -1,4 +1,4 @@
-import { LoginService } from './../services/login.service';
+import { AuthService } from './../services/auth.service';
 import { Component, OnInit } from '@angular/core';
 
 @Component({
@@ -10,12 +10,26 @@ export class LoginComponent implements OnInit {
   title = 'Login';
   private uname: any;
   private pwd: any;
+  private loginStatus: any;
+  private loginAuth: any;
 
-  constructor(login: LoginService) {
-    [this.uname, this.pwd] = login.getUserData();
+  constructor(loginAuth: AuthService) {
+    this.loginAuth = loginAuth;
+  }
+
+  loginClick(unameVal:string,pwdValue:string){
+    this.uname = unameVal;
+    this.pwd = pwdValue;
+
+    console.log(this.uname, this.pwd);
+    this.loginStatus = this.loginAuth.auth(this.uname,this.pwd);
+    console.log(this.loginStatus);
   }
 
   ngOnInit(): void {
+  }
+
+  reset(): void{
   }
 
 }
